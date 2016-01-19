@@ -76,6 +76,15 @@
     <!-- Actual Content area -->
     <div class="row" id="profile">
       <h2 class="subhead">Showing 21-40 of 109 Results</h2>
+      <ul class="list-group">
+        <li class="list-group-item">Person 1             
+          <a href="/profiles/mark-davis">
+              <img style="width:150px; height:150px;" src="https://cap.stanford.edu/profiles/viewImage?profileId=4282&amp;type=square" alt="Mark M. Davis" data-empty-src="/profiles/images/profile-large-blank.png">
+          </a>
+        </li>
+        <li class="list-group-item">Person 2</li>
+        <li class="list-group-item">Person 3</li>
+      </ul>
       <ul class="unstyled list-items">
         <li>
           <div class="mini-profile media">
@@ -126,7 +135,7 @@
         <ul class="pagination pull-right">
           <li><a href="#">20 Result/page</a></li>
         </ul>
-      </div> <!-- End div.content -->
+      </div> <!-- End div.profile -->
     </div> <!-- End container -->
 
     <!-- Footer section -->
@@ -140,7 +149,12 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
-      
+      $.get('http://localhost/simple_pha', function(data){
+        //Loop through each row and output the data
+        $(data).each(function(){
+            $('#rows').append('<li>'+this.name+'</li>');
+        });
+      });     
     </script>
   </body>
   </html>

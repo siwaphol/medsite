@@ -6,7 +6,7 @@ html {
 }
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 60px;
+/*  margin-bottom: 60px;*/
 }
 .footer {
 /*  position: absolute;
@@ -130,6 +130,17 @@ code {
   padding: 0px;
 }
 
+.nav-footer {
+  margin-bottom: 0px;
+  border-radius: 0px;
+  background-color: #222;
+  border-color: #080808;
+  position: relative;
+  min-height: 50px;
+  border: 1px solid transparent;
+  color: #ffffff;
+  text-align: center;
+}
 /* Customize the nav-justified links to be fill the entire space of the .navbar */
 
 .nav-justified {
